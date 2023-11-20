@@ -1,0 +1,161 @@
+@import "../../styles/partials/global";
+
+:root {
+  --delete-inventory-modal-card-width: 100%;
+  --delete-inventory-modal-card-height: 100%;
+
+  --delete-inventory-modal-card-width-tablet: 40rem;
+  --delete-inventory-modal-card-height-tablet: 16rem;
+}
+
+.delete-inventory-modal {
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#13182c, 0.5);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  &__container {
+    width: var(--delete-inventory-modal-card-width);
+    height: var(--delete-inventory-modal-card-height);
+    background-color: var(--White);
+    margin-top: 0;
+    border-radius: 0.2rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      margin-top: 11.5rem;
+      border-radius: 0.2rem;
+      padding: 1.5rem 4rem;
+      width: var(--delete-inventory-modal-card-width-tablet);
+      height: var(--delete-inventory-modal-card-height-tablet);
+    }
+
+    @include desktop {
+      margin-top: 14rem;
+    }
+  }
+
+  &__close {
+    margin-left: auto;
+
+    @include tablet {
+      margin-right: -2rem;
+    }
+
+    img {
+      width: 1.3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+
+    @include tablet {
+      margin-top: initial;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--Instock-Black);
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 0.9rem;
+      max-width: 35rem;
+      line-height: 1.7rem;
+
+      @include tablet {
+        padding-right: 4.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    @include tablet {
+      margin-left: auto;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__cancel {
+    transition: background-color 0.25s, color 0.25s;
+    background-color: var(--White);
+    color: var(--Slate);
+    border: 1px solid var(--Slate);
+    border-radius: 1.25rem;
+    padding: 0.35rem 2.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    flex-grow: 1;
+
+    @include tablet {
+      margin-left: 1rem;
+      padding: 0.35rem 1rem;
+    }
+
+    &:hover {
+      border-color: var(--Instock-Indigo);
+      color: var(--Instock-Indigo);
+      transition: border-color 0.25s, color 0.25s;
+      cursor: pointer;
+    }
+  }
+
+  &__delete {
+    transition: background-color 0.25s, color 0.25s;
+    background-color: var(--Red);
+    color: var(--White);
+    border: 1px solid var(--Red);
+    border-radius: 1.25rem;
+    padding: 0.35rem 2.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    flex-grow: 1;
+
+    @include tablet {
+      margin-left: 1rem;
+      padding: 0.35rem 1rem;
+    }
+
+    &:hover {
+      background-color: var(--Instock-Black);
+      border: 1px solid var(--Instock-Black);
+      color: var(--White);
+      transition: background-color 0.25s, color 0.25s;
+      cursor: pointer;
+    }
+  }
+}

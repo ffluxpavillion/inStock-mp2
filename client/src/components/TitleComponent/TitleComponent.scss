@@ -1,0 +1,150 @@
+@use '../../styles/partials/abstracts' as*;
+
+.header-block {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Graphite);
+    width: 100%;
+    z-index: 1;
+  
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-color: var(--White);
+      width: 87%;
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0.2rem;
+      z-index: 1;
+      padding: 1rem;
+      border-bottom: 1px solid var(--Cloud);
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 5rem;
+        display: flex;
+        padding: 1rem 1.5rem 0.7rem;
+        width: var(--card-width-tablet);
+      }
+  
+      @include desktop {
+        height: 6.6rem;
+        padding: 1rem 2rem 1.5rem;
+        width: var(--card-width);
+        align-items: center;
+      }
+    }
+
+    .header-edit {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__back-button {
+        display: flex;
+        align-items: center;
+        margin-top: 0.2rem;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      column-gap: 0.5rem;
+      font-size: 1.45rem;
+      padding-left: 0;
+
+      @include tablet {
+        padding-left: 0rem;
+        margin-right: auto;
+      }
+      @include desktop {
+        padding-left: 0rem;
+        margin-right: auto;
+      }
+    }
+  
+    &__search {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      font-size: 0.875rem;
+      font-weight: 400;
+      padding: 0.5rem 0;
+      margin: 1rem 1rem;
+      border: 1px solid var(--Cloud);
+      border-radius: 1.25rem;
+
+      @include tablet {
+        width: 10rem;
+        margin-right: 1.2rem;
+      }
+
+      @include desktop {
+        width: 18rem;
+      }
+  
+      input {
+        padding-left: 1rem;
+        border: none;
+        margin-right: auto;
+        background-color: transparent;
+        width: 85%;
+  
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      img {
+        padding-right: 0.5rem;
+  
+        @include tablet {
+          width: 1.7rem;
+          margin-left: -3rem;
+        }
+  
+        @include desktop {
+          padding-right: 0.5rem;
+        }
+      }
+  
+      &-bar {
+        display: inline;
+      }
+    }
+  
+    &__add {
+      &-button {
+        transition: background-color 0.25s;
+        &:hover {
+          background-color: var(--Graphite);
+          color: var(--White);
+          transition: background-color 0.25s;
+          cursor: pointer;
+        }
+  
+        @include tablet {
+          background-color: var(--Instock-Indigo);
+          color: var(--White);
+          border: none;
+          border-radius: 1.25rem;
+          padding: 0.35rem 1.5rem;
+          font-size: 0.8rem;
+          font-weight: 400;
+          margin-bottom: 0.4rem;
+        }
+        @include desktop {
+          background-color: var(--Instock-Indigo);
+          color: var(--White);
+          border: none;
+          border-radius: 1.25rem;
+          padding: 0.6rem 2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }

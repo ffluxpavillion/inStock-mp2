@@ -1,0 +1,29 @@
+.inputEl-radio {
+	&__container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		row-gap: 1rem;
+	}
+
+	&__option {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 0.5rem;
+		flex: 1 0 50%;
+
+		.disabled {
+			color: var(--Slate) !important;
+		}
+	}
+
+	&__radio {
+		display: flex;
+		flex-direction: row;
+		&__button {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+}

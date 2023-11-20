@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+  &__text {
+    font-size: .7rem;
+    font-family: var(--font-family);
+    background-color: var(--Light-Grey);
+    color: var(--Slate);
+    width: 100%;
+    padding: 3rem 0rem 3rem 0rem;
+  }
+}

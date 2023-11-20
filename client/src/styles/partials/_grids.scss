@@ -1,0 +1,13 @@
+@use './abstracts' as*;
+
+section, .section, .container{
+    padding: 1.5rem 1rem;
+    
+    @include tablet{
+      padding: 3rem 2.25rem;
+    }
+    @include desktop{
+      padding: 3rem calc((100% - 1020px)/2);
+    }
+}
+

@@ -1,0 +1,19 @@
+.tag {
+    display: flex;
+    text-transform: capitalize;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1.25rem;
+}
+
+.in-stock {
+    color: var(--Green);
+    background-color: color-mix(in srgb, var(--Green) 12%, #fff 100%);
+}
+
+.no-stock {
+    color: var(--Red);
+    background-color: color-mix(in srgb, var(--Red) 12%, #fff 100%);
+}
+

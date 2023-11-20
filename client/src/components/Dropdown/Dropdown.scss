@@ -1,0 +1,28 @@
+.inputEl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 0.25rem;
+    padding-bottom: 1rem;
+    &-dropdown {
+        position: relative;
+    }
+    &__dropdown {
+        appearance: none;
+        display: flex;
+        border: 1px solid var(--Cloud);
+        border-radius: 1.25rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        &:focus, &:focus-visible {
+            outline: none;
+            border: 1px solid var(--Instock-Indigo);
+        }
+        &__icon {
+            position: absolute;
+            top: 25%;
+            right: 1rem;
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.inputEl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 0.25rem;
+    padding-bottom: 1rem;
+    &__field[type=text] {
+        display: flex;
+        border: 1px solid var(--Cloud);
+        border-radius: 1.25rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        &:focus, &:focus-visible {
+            outline: none;
+            border: 1px solid var(--Instock-Indigo);
+        }
+
+        &:invalid, &:invalid:required {
+            border: 1px solid red;
+        }
+    }
+
+
+
+    & textarea {
+        width: 100%;
+        resize: vertical;
+        display: flex;
+        border: 1px solid var(--Cloud);
+        border-radius: 1.25rem;
+        padding: 0.5rem 1rem;
+        min-height: 2.25rem;
+        &:focus, &:focus-visible {
+            outline: none;
+            border: 1px solid var(--Instock-Indigo);
+        }
+
+        &:invalid, &:invalid:required {
+            border: 1px solid red;
+        }
+    }
+}

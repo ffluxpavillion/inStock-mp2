@@ -1,0 +1,599 @@
+@import "../../styles/partials/global";
+
+:root {
+  --card-width: 65rem;
+  --card-width-tablet: 42rem;
+}
+
+.tablet-view {
+  display: none;
+
+  @include tablet {
+    display: initial;
+  }
+}
+
+.title-block {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Graphite);
+  width: 100%;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--White);
+    width: 87%;
+    height: 3.5rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    z-index: 1;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 5rem;
+      align-items: flex-end;
+      padding: 1rem 1.5rem 0.7rem;
+      width: var(--card-width-tablet);
+    }
+
+    @include desktop {
+      height: 6.6rem;
+      padding: 1rem 2rem 1.5rem;
+      width: var(--card-width);
+    }
+  }
+
+  &__title {
+    font-size: 1.45rem;
+    padding-left: 1.5rem;
+
+    @include tablet {
+      font-size: 1.9rem;
+      padding-left: 0rem;
+      margin-right: auto;
+    }
+    @include desktop {
+      font-size: 2.2rem;
+      padding-left: 1.5rem;
+      margin-right: auto;
+    }
+  }
+
+  &__search {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.8rem;
+      font-weight: 400;
+      width: 10rem;
+      margin-right: 1.2rem;
+      margin-bottom: 0.4rem;
+      padding: 0.2rem 0;
+      border: 1px solid var(--Cloud);
+      border-radius: 1.25rem;
+    }
+    @include desktop {
+      font-size: 1rem;
+      width: 18rem;
+      padding: 0.5rem 0;
+    }
+
+    input {
+      padding-left: 1rem;
+      border: none;
+      margin-right: auto;
+      background-color: transparent;
+      width: 85%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    img {
+      padding-right: 0.5rem;
+
+      @include tablet {
+        width: 1.7rem;
+        margin-left: -3rem;
+      }
+
+      @include desktop {
+        padding-right: 0.5rem;
+      }
+    }
+
+    &-bar {
+      display: inline;
+    }
+  }
+
+  &__add {
+    &-button {
+      transition: background-color 0.25s;
+      font-weight: 600;
+
+      &:hover {
+        background-color: var(--Graphite);
+        color: var(--White);
+        transition: background-color 0.25s;
+        cursor: pointer;
+      }
+
+      @include tablet {
+        background-color: var(--Instock-Indigo);
+        color: var(--White);
+        border: none;
+        border-radius: 1.25rem;
+        padding: 0.35rem 1.5rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+      }
+      @include desktop {
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.card {
+  &__background {
+    width: 100%;
+    background-color: var(--Light-Grey);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    width: 87%;
+    background-color: var(--White);
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.05);
+    z-index: 0;
+
+    @include tablet {
+      width: var(--card-width-tablet);
+    }
+
+    @include desktop {
+      width: var(--card-width);
+    }
+  }
+}
+
+// this search block is for mobile view
+.search-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__search {
+    margin: 0.7rem 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+    font-weight: 400;
+    width: 15rem;
+    padding: 0.2rem 0;
+    border: 1px solid var(--Cloud);
+    border-radius: 1.25rem;
+
+    input {
+      flex-shrink: 1;
+      font-size: 0.8rem;
+      padding-left: 1rem;
+      width: 80%;
+      border: none;
+      margin-right: auto;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    img {
+      padding-right: 0.7rem;
+      width: 1.9rem;
+    }
+
+    &-bar {
+      display: inline;
+    }
+  }
+
+  &__add {
+    &-button {
+      background-color: var(--Instock-Indigo);
+      color: var(--White);
+      border: none;
+      border-radius: 1.25rem;
+      padding: 0.2rem 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      width: 15rem;
+      height: 2rem;
+      margin-bottom: 0.5rem;
+      transition: background-color 0.25s;
+      &:hover {
+        background-color: var(--Graphite);
+        color: var(--White);
+        transition: background-color 0.25s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sort-block {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Light-Grey);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    width: var(--card-width-tablet);
+    background-color: var(--Light-Grey);
+    color: var(--Slate);
+    font-size: 0.7rem;
+    z-index: 0;
+
+    @include desktop {
+      width: var(--card-width);
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__column-header {
+    display: flex;
+    text-transform: uppercase;
+
+    &:nth-of-type(1) {
+      width: 9.8rem;
+      @include tablet {
+        width: 10.3rem;
+      }
+      @include desktop {
+        width: 14.5rem;
+      }
+    }
+
+    &:nth-of-type(2) {
+      width: 9.5rem;
+      @include tablet {
+        width: 9rem;
+      }
+      @include desktop {
+        width: 13rem;
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 7.5rem;
+      @include tablet {
+        width: 8rem;
+      }
+      @include desktop {
+        width: 11rem;
+      }
+    }
+
+    &:nth-of-type(4) {
+      width: 4.4rem;
+      @include desktop {
+        width: 6rem;
+      }
+    }
+
+    &:nth-of-type(5) {
+      margin-left: auto;
+      width: 7.7rem;
+      @include desktop {
+        width: 14rem;
+      }
+    }
+
+    &:nth-of-type(6) {
+      margin-left: auto;
+      width: 4rem;
+      padding-left: 0.6rem;
+      @include desktop {
+        width: 3.5rem;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__buttons {
+    padding-left: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__icons {
+    .sort-block__icon {
+      margin-top: auto;
+      width: 1rem;
+    }
+  }
+}
+
+.inventory-block {
+  border-top: 0.09rem solid var(--Cloud);
+
+  @include tablet {
+    border-top: none;
+    width: var(--card-width-tablet);
+    z-index: 2;
+  }
+  @include desktop {
+    width: var(--card-width);
+  }
+
+  &__row {
+    border-top: 0.09rem solid var(--Cloud);
+    background-color: var(--White);
+    transition: background-color 0.25s;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &:hover {
+      background-color: var(--Light-Blue);
+      transition: background-color 0.25s;
+    }
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__mobile-block-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    @include tablet {
+      display: flex;
+      padding: initial;
+      width: 100%;
+    }
+  }
+
+  &__column-1 {
+    width: 45%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      width: initial;
+      flex: 1;
+      @include desktop {
+        flex: 0.9;
+      }
+    }
+  }
+
+  &__column-2 {
+    flex-grow: 1;
+    margin-left: 1rem;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      margin-left: initial;
+    }
+  }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.1rem;
+
+    color: var(--Slate);
+  }
+
+  &__inventory {
+    &-name,
+    &-category,
+    &-status,
+    &-quantity,
+    &-warehouse-name {
+      font-size: 0.6rem;
+      font-weight: 400;
+      color: var(--Instock-Black);
+
+      @include tablet {
+        font-size: 0.9rem;
+      }
+      @include desktop {
+        font-size: 0.9rem;
+      }
+    }
+
+    &-name {
+      img {
+        width: 0.9rem;
+        margin-right: 0.5rem;
+      }
+
+      a {
+        display: flex;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--Instock-Indigo);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        &:hover .inventory-block__inventory-name-chevron {
+          transform: translateX(0.25rem);
+        }
+      }
+
+      &-chevron {
+        transition: transform 0.3s ease;
+      }
+
+      @include tablet {
+        flex: 1;
+        padding-left: 1.5rem;
+      }
+
+      @include desktop {
+        padding-left: 2rem;
+      }
+    }
+
+    &-category {
+      width: 5.5rem;
+      @include tablet {
+        flex: 0.63;
+        padding-right: 1.8rem;
+        width: 1.5rem;
+      }
+      @include desktop {
+        flex: 0.7;
+      }
+    }
+
+    &-status {
+      text-transform: uppercase;
+      @include tablet {
+        flex: 1;
+        width: 2rem;
+        height: 24px;
+      }
+      @include desktop {
+        flex: 1.5;
+        padding-left: 0.7rem;
+      }
+    }
+
+    &-quantity {
+      @include tablet {
+        flex: 0;
+        width: 2rem;
+      }
+      @include desktop {
+        flex: 1;
+        padding-left: 0rem;
+      }
+    }
+
+    &-warehouse-name {
+      @include tablet {
+        flex: 0.9;
+        width: 2rem;
+        padding-left: 2rem;
+      }
+      @include desktop {
+        flex: 1.85;
+        padding-left: 4rem;
+      }
+    }
+  }
+
+  &__inventory-status-tag {
+    display: flex;
+    height: 24px;
+    border-radius: 1.25rem;
+    padding: 0 0.5rem 0;
+    font-weight: bold;
+    align-items: center;
+  }
+
+  &__inventory-status--in-stock {
+    background-color: rgb(21, 132, 99, 0.07);
+    color: var(--Green);
+    width: 3.5rem;
+
+    @include tablet {
+      width: 4.7rem;
+    }
+  }
+
+  &__inventory-status--no-stock {
+    background-color: rgb(201, 69, 21, 0.07);
+    color: var(--Red);
+    width: 4.9rem;
+
+    @include tablet {
+      width: 6.7rem;
+    }
+  }
+
+  &__mobile-block-2 {
+    @include tablet {
+      display: initial;
+    }
+  }
+
+  &__inventory-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    @include tablet {
+      display: flex;
+      padding: initial;
+      margin-right: 2rem;
+    }
+
+    img {
+      width: 1.2rem;
+      margin: 0.5rem 0;
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include tablet {
+        width: 2rem;
+        margin: 2rem 0;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.mobile-view {
+  @include tablet {
+    display: none;
+  }
+}
+
+#home-search-bar {
+  border: none;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}

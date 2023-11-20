@@ -1,0 +1,41 @@
+@use '../../styles/partials/abstracts' as*;
+
+.inventory__details {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        @include tablet {
+            flex-direction: row;
+            column-gap: 3rem;
+        }
+    }
+
+    &__tab {
+        display: inherit;
+        flex-direction: column;
+        row-gap: 0.25rem;
+        flex: 1 1 auto;
+    }
+    &__column {
+        display: inherit;
+        flex-direction: column;
+        row-gap: 1rem;
+        flex: 1 1 50%;
+        @include tablet {
+            row-gap: 2rem;
+            &:first-child {
+                padding-right: 1.5rem;
+                border-right: 1px solid var(--Cloud);
+            }
+        }
+    }
+    &__stats {
+        display: inherit;
+        flex-direction: row;
+        flex: 1 1 auto;
+        @include tablet {
+            column-gap: 1rem;
+        }
+    }
+}

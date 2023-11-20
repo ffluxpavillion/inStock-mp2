@@ -1,0 +1,286 @@
+@use '../../styles/partials/abstracts' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/grids' as *;
+@use '../../styles/partials/reset' as *;
+
+// ---------- MAIN ----------
+.page {
+  &-container {
+    width: 343px;
+    margin: auto;
+    box-shadow: 0px 2px 5px 0px #13182c1a;
+
+    @media screen and (min-width: 767px) {
+      width: 704px;
+      height: 612px;
+      margin: auto;
+      display: table;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 1020px;
+      height: 612px;
+      margin: auto;
+      display: table;
+    }
+  }
+
+  &-header {
+    border-bottom: 1px solid #bdc5d5;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      justify-content: start;
+      padding: 2rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding: 2rem 3rem 2rem;
+    }
+  }
+
+  &-header__div {
+    display: inline-flex;
+  }
+
+  &-header__button {
+    background-color: white;
+    border: none;
+  }
+
+  &-header__button-icon {
+    width: 24px;
+    height: 24px;
+    top: 176px;
+    left: 40px;
+  }
+
+  &-header__header {
+    font-family: Titillium Web;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+// ---------- FORM ----------
+.warehouse {
+  &-form__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 1rem;
+    }
+  }
+
+  &-form__header {
+    width: 162px;
+    height: 28px;
+    top: 245px;
+    left: 40px;
+    font-family: Titillium Web;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &-form__section--first {
+    border-bottom: 1px solid #bdc5d5;
+    display: grid;
+    justify-content: space-around;
+    padding: 1.5rem;
+    gap: 0.8rem;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      border-bottom: none;
+      border-right: 0.5px solid #bdc5d5;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      width: auto;
+    }
+  }
+
+  &-form__section--second {
+    display: grid;
+    justify-content: space-around;
+    padding: 1.5rem;
+    gap: 0.8rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 1.5rem;
+      border-left: 0.5px solid #bdc5d5;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+// ---------- FORM (TEXT INPUT) ----------
+.text-input {
+  &__header {
+    width: 100px;
+    height: 20px;
+    top: 297px;
+    left: 40px;
+    font-family: Titillium Web;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 0.7rem;
+  }
+
+  &__input {
+    width: 295px;
+    height: 36px;
+    top: 321px;
+    left: 40px;
+    border-radius: 20px;
+    border: 1px solid #bdc5d5;
+    font-size: 13px;
+    color: #5c667e;
+    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    &:focus {
+        outline: none;
+        border: 1px solid var(--Instock-Indigo);
+        }
+
+    @media screen and (min-width: 768px) {
+      width: 288px;
+      height: 38px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 430px;
+      height: 38px;
+      font-size: 14px;
+    }
+  }
+}
+
+// ---------- BUTTONS CONTAINER ----------
+.warehouse-form__buttons {
+  width: 343px;
+  height: 5rem;
+  border-radius: 0px 0px 3px 3px;
+  background: #f7f8f9b2;
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    width: 704px;
+    height: 70px;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-right: 2.5rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1020px;
+    height: 70px;
+    padding-right: 3.5rem;
+  }
+}
+
+// ---------- BUTTONS  ----------
+.btn {
+  width: 140px;
+  height: 36px;
+  top: 1006px;
+  left: 195px;
+  padding: 8px 21px 8px 21px;
+  border-radius: 20px;
+  gap: 10px;
+  background: #2e66e5;
+  border: none;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #232940;
+    border-color: #232940;
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 16px 5px 16px;
+    width: 155px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 138px;
+    height: 38px;
+    padding: 5px 16px 5px 16px;
+  }
+}
+
+.btn--cancel {
+  width: 8.7rem;
+  height: 36px;
+  padding: 8px 51px 8px 51px;
+  border-radius: 20px;
+  border: 1px solid #bdc5d5;
+  color: #5c667e;
+  background-color: white;
+  font-weight: 600;
+  &:hover {
+    color: #2e66e5;
+    background-color: white;
+    border-color: #2e66e5;
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 16px 5px 16px;
+    width: 72px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 72px;
+    height: 38px;
+    padding: 5px 16px 5px 16px;
+  }
+}
+
+.error {
+  color: #c94515;
+  font-size: 14px;
+  display: flex;
+  font-weight: 200;
+  gap: 0.4rem;
+  padding-bottom: 0;
+
+  &-icon {
+    width: 1.3rem;
+  }
+
+  &-input {
+    border: 1px solid #c94515;
+  }
+}
+
+// ---------- ACTIVE STATE  ----------
+// input:focus {
+//   outline: none !important;
+//   border: 1px solid #2e66e5 !important;
+// }
