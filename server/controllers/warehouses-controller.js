@@ -125,27 +125,20 @@ const createWarehouse = (req, res) => {
     contact_phone,
     contact_email,
   })
+  
+// .returning('id') method --> after insertion, tells Knex to return the value of the id column of the new row.
+.returning('id')
+.then(([newWarehouseId]) => {
+  return knex('warehouses').where({ id: newWarehouseId }).first();
+})
 
-  .then(([newWarehouseId]) => {
-		// Fetch the newly inserted warehouse
-		return knex('warehouses').where({ id: newWarehouseId }).first();
-	})
-	.then((newWarehouse) => {
-		// Check inventory for the newly created warehouse
-		return knex('inventories').where({ warehouse_id: newWarehouse.id }).first();
-	})
-	.then((inventoryFound) => {
-		if (!inventoryFound) {
-			return res.status(404).json({
-				message: `Cannot find inventory for warehouse id: ${newWarehouse.id}`,
-			});
-		}
-		// Respond with 201 status and the newly created warehouse
-		res.status(201).json(newWarehouse);
-	})
-	.catch((error) => {
-		res.status(500).json({ message: `Server error: ${error.message}` });
-	});
+.then((newWarehouse) => {
+  res.status(201).json(newWarehouse);
+})
+
+.catch((error) => {
+  res.status(500).json({ message: `Server error: ${error.message}` });
+});
 };
 
 // ---------- UPDATE WAREHOUSE (PUT/EDIT) ----------
