@@ -13,8 +13,8 @@ The goal is to deliver an Inventory Management System for a Fortune 500 client f
 Tools used to complete project: create-react-app, react-router-dom, Node, Express, MySQL, Knex, BEM/SASS, npm, Postman, and browser development tools.
 
 
-## To Run:
-### Server:
+### To Run:
+#### Server:
 cd into server folder
 
 VSCode/terminal: run `npm i` / `npm install`
@@ -24,7 +24,7 @@ VSCode/terminal: run `nodemon server`
 Open http://localhost:8080 to view in your browser.
 
 
-### Client:
+#### Client:
 cd into server folder
 
 VSCode/terminal: run `npm i` / `npm install`
