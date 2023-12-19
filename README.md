@@ -2,10 +2,10 @@
 Collaborative Project for BrainStation Nov 2023
 
 by:
-Arjun Sahjpaul
-Saksham Tandom
-Kate Bark
-Michael Sun Dela Cruz
+## Arjun Sahjpaul
+## Saksham Tandom
+## Kate Bark
+## Michael Sun Dela Cruz
 
 # Project Overview
 The goal is to deliver an Inventory Management System for a Fortune 500 client from the ground up. The existing system for the client is not scalable and doesn't perform well under a heavy traffic load. Your team's goal is to deliver this time-sensitive, full-stack application with a modern React front-end communicating with a robust Express back-end; a full CRUD warehouse/inventory management system.  Utilized Git, GitHub, Jira and the Scrum methodology to manage task delegation & collaborative workflows, and Figma for design mockups.
