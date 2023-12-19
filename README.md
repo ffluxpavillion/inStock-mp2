@@ -15,12 +15,20 @@ Tools used to complete project: create-react-app, react-router-dom, Node, Expres
 
 # To Run:
 ## Server:
-VSCode/terminal: run `nodemon server` in server folder.
+cd into server folder
+
+VSCode/terminal: run `npm i` / `npm install`
+
+VSCode/terminal: run `nodemon server`
 
 Open http://localhost:8080 to view in your browser.
 
 
 ## Client:
+cd into server folder
+
+VSCode/terminal: run `npm i` / `npm install`
+
 VSCode/terminal: run `npm start` in client folder.
 
 Open http://localhost:3000 to view it in your browser.
